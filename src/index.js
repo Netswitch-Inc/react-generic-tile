@@ -14,7 +14,8 @@ const GenericTile = styled.div`
   outline: none;
   box-sizing: border-box;
   background-position: 0;
-  background-color: ${props => props.loading ? '#F4F6F7' : "" };
+  background-color: ${props => props.loading ? '#F4F6F7' : "#F7F9FA" };
+  // background-color: '#';
   opacity: ${props => props.loading ? '0.3' : '1'};
   border: 1px solid transparent;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
@@ -26,10 +27,13 @@ const GenericTile = styled.div`
 
   :hover {
     background-color: #F7F9FA;
+    opacity: 0.4;
+    color: #1e1e28;
   }
 
   :active {
-    background-color: #EAF9F6;
+    background-color: #1d83c5;
+    color: #f5f5f5;
   }
 `
 
@@ -77,22 +81,7 @@ const linesEllipsisSettings = {
 export default class ReactGenericTile extends Component {
   render() {
 
-    const { header, subheader, footer, number, scale, indicator, loading, icon, size, onClick } = this.props;
-    let { color } = this.props;
-
-    switch (color) {
-      case 'Good':
-        color = "#2b7c2b";
-        break;
-      case 'Warning':
-        color = "#e78c07";
-        break
-      case 'Bad':
-        color = "#bb0000";
-        break;
-      default:
-        break;
-    }
+    const { header, subheader, footer, number, scale, indicator, loading, icon, size, onClick ,color} = this.props;
 
     return (
       <GenericTile
@@ -120,7 +109,7 @@ export default class ReactGenericTile extends Component {
         <SubHeader>
           <LinesEllipsis
             text={subheader}
-            maxLine='2'
+            maxLine='3'
             {...linesEllipsisSettings}
           />
         </SubHeader>
