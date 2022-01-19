@@ -15,7 +15,6 @@ const GenericTile = styled.div`
   box-sizing: border-box;
   background-position: 0;
   background-color: ${props => props.loading ? '#F4F6F7' : "" };
-  // background-color: '#';
   opacity: ${props => props.loading ? '0.3' : '1'};
   border: 1px solid transparent;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
