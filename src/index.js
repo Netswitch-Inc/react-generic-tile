@@ -14,7 +14,7 @@ const GenericTile = styled.div`
   outline: none;
   box-sizing: border-box;
   background-position: 0;
-  background-color: ${props => props.loading ? '#F4F6F7' : "#F7F9FA" };
+  background-color: ${props => props.loading ? '#F4F6F7' : "" };
   // background-color: '#';
   opacity: ${props => props.loading ? '0.3' : '1'};
   border: 1px solid transparent;
@@ -47,7 +47,6 @@ const Header = styled.div`
 const SubHeader = styled.div`
   padding: 2px 0;
   font-size: 12px;
-  color: #7A7C7D;
   height: 2.4em;
 `
 
