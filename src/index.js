@@ -40,7 +40,8 @@ const Header = styled.div`
   position: relative;
   min-heightL 1.2em;
   max-height: 2.4em;
-  font-size: 16px;
+  font-size: 14px;
+  text-align: center;
 `
 
 const SubHeader = styled.div`
@@ -68,6 +69,7 @@ const Footer = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 13px;
+  text-align: center;
 `;
 
 const linesEllipsisSettings = {
@@ -99,7 +101,7 @@ export default class ReactGenericTile extends Component {
         <Header>
           <LinesEllipsis
             text={header}
-            maxLine='2'
+            maxLine='3'
             {...linesEllipsisSettings}
           />
         </Header>
